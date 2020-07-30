@@ -47,5 +47,91 @@ body
 
 .control .btn-material:hover
 {
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0,0,0,0.23);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
+              0 6px   6px rgba(0,0,0,0.23);
+}
+
+.control .icon-material-search
+{
+  color: white;
+  position: absolute;
+  top:42px;
+  right: 68px;
+  transition: opacity 0.3s ease-in-out;
+  font-size: 40px;
+}
+
+.p-y-md
+{
+  padding-top: 2.8rem;
+  padding-bottom: 2.8rem;
+}
+
+body.search-active .search-input
+{
+  opacity: 1;
+  transform: none;
+  pointer-events: all;
+}
+
+body.search-active .icon-close
+{
+  opacity: 1;
+  transform: rotate(-90deg);
+}
+
+body.search-active .control
+{
+  cursor: default;
+}
+
+body.search-active .control .btn-material
+{
+  transform: scale(70);
+}
+
+body.search-active .control .icon-material-search
+{
+  opacity: 0;
+}
+
+.icon-close{
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  color: white;
+  cursor: pointer;
+  font-size: 70px;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.icon-close:hover
+{
+  transform: rotate(0);
+}
+
+.search-input
+{
+  height: 80px;
+  position: absolute;
+  top: 50%;
+  left: 50px;
+  margin-top: -40px;
+  pointer-events: none;
+  opacity: 0;
+  transform: translate(40px, 0);
+  transition: all 0.3s ease-in-out;
+}
+
+.search-input input
+{
+  color: white;
+  font-size: 54px;
+  border: 0;
+  background: transparent;
+  -webkit-appearanse:none;
+  box-sizing: border-box;
+  outline: 0;
+  font-weight: 200px;
 }

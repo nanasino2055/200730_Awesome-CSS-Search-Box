@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <link href='http://fonts.googleapis.com/css?family=Material+Icons' rel='stylesheet' type='text/css'>
     <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous"> -->
-    <!-- <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script> -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <title>webサイト制作テンプレート</title>
   </head>
   <body>
@@ -22,8 +22,16 @@
     <div class="search-input">
       <input type="text" class="input-search" placeholder="Start-Typing">
     </div>
-    <script type="text/javascript">
 
+    <script type="text/javascript">
+      $('.control').click(function(){
+        $('body').addClass('search-active');
+        $('.input-search').focus();
+      });
+
+      $('icon-close').click(function(){
+        $('body').removeClass('search-active');
+      });
     </script>
   </body>
 </html>
